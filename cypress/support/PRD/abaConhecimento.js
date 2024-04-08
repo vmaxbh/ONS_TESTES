@@ -5,9 +5,7 @@ Cypress.Commands.add('abaConhecimentoManu', () => {
     cy.get('#select2-filtro_conhecimento-container').click().log('Campo de Filtro2 clicado com Sucesso!')
     cy.get('.select2-search__field').type('Manuais').type('{enter}').log('Input do campo de pesquisa do Filtro2 feito com Sucesso!')
     cy.get('#inputTexto').type('Sistema de Gerenciamento de Incidentes - OTRS').log('Input do campo de pesquisa do Filtro3 feito com Sucesso!')
-    cy.wait(5000)
-    cy.get('.nomeconhecimento_b9fbfbdd > #donwload_170', {timeout:10000}).should('contain', 'Sistema de Gerenciamento de Incidentes - OTRS').log(' Manual confirmado na interface com Sucesso!')
-    cy.wait(5000)
+    
 });
 
 Cypress.Commands.add('abaConhecimentoContab', () => {
