@@ -5,6 +5,7 @@ const dateTime = moment().format('DD-MM-YYYY_HH-mm-ss');
 
 module.exports = defineConfig({
   e2e: {
+    video: true,
     
   },
   reporter: "mochawesome",
