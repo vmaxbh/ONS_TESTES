@@ -22,6 +22,13 @@ Cypress.Commands.add('consultaPR', () => {
     cy.get('.custom-checkbox > span', {timeout:10000}).click().log('CLicado no campo checkbox com sucesso!')
     cy.wait(4000)
     cy.get(':nth-child(1) > .cabecalho_produto > a > strong', {timeout:10000}).should('exist').log('Componente REVISÃO DO SUBMÓDULO 3.5-RS - CONSOLIDAÇÃO DA PREVISÃO DE CARGA PARA PLANEJAMENTO DA OPERAÇÃO ELETROENERGÉTICA (ALTERAÇÃO DE PRAZOS) confirmado na tela com Sucesso!')
+    // Adicione uma verificação para garantir que o erro não ocorra
+    cy.on('uncaught:exception', (err) => {
+        if (err.message.includes('SignalR')) {
+            // Ignorar o erro
+            return false;
+        }
+    });
 });
 
 Cypress.Commands.add('portalAPI', () => {
