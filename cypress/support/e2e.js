@@ -1,3 +1,4 @@
 import './commands'
 import './login'
-import './conhecimento'
+import './abaConhecimento'
+import './abaServicos'
