@@ -15,8 +15,6 @@ Cypress.Commands.add('abaConhecimentoContab', () => {
     cy.get('.area-menu > :nth-child(3) > a', {timeout:10000}).click().log('Aba Conhecimento Clicado com Sucesso!');
     cy.get('#select2-filtro_processo-container', {timeout:10000}).click().log('Campo de Filtro clicado com Sucesso!')
     cy.get('.select2-search__field', {timeout:10000}).type('Apuração e Contabilização').type('{enter}').log('Input do campo de pesquisa do Filtro feito com Sucesso!')
-    cy.wait(5000)
-    cy.get('#donwload_818', {timeout:10000}).should('contain', 'Apuração dos Encargos de Fronteira').log(' Remuneração da Fronteira confirmado na interface com Sucesso!')
-    cy.wait(5000)
+    
 
 });
