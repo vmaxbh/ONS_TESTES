@@ -1,5 +1,5 @@
 Cypress.Commands.add('loginCaminhoFeliz', (username = Cypress.env("USERNAME"), password = Cypress.env("PASSWORD")) => {
-    cy.visit('/')
+    cy.visit('https://sintegre.ons.org.br')
     cy.get('#username', {timeout:5000}).type(username).log('Usuário inputado com Sucesso cypress.env.json!');
     cy.get('[type="submit"]', {timeout:5000}).click().log('Botão de Submit do Username clicado com Sucesso!');
     cy.get('#password', {timeout:5000}).type(password).log('Senha inputado com Sucesso cypress.env.json!');
@@ -9,7 +9,7 @@ Cypress.Commands.add('loginCaminhoFeliz', (username = Cypress.env("USERNAME"), p
 });
 
 Cypress.Commands.add('loginUsuárioInvalido', (username = Cypress.env("USERNAME"), password = Cypress.env("PASSWORD")) => {
-    cy.visit('/')
+    cy.visit('https://sintegre.ons.org.br')
     cy.get('#username', {timeout:5000}).type("usuario@invalido.com").log('Usuário fantasia inputado com Sucesso!');
     cy.get('[type="submit"]', {timeout:5000}).click().log('Botão de Submit do Username clicado com Sucesso!');
     cy.get('#password', {timeout:5000}).type(password).log('Senha inputado com Sucesso cypress.env.json!');
@@ -20,7 +20,7 @@ Cypress.Commands.add('loginUsuárioInvalido', (username = Cypress.env("USERNAME"
 });
 
 Cypress.Commands.add('loginSenhaInvalida', (username = Cypress.env("USERNAME"), password = Cypress.env("PASSWORD")) => {
-    cy.visit('/')
+    cy.visit('https://sintegre.ons.org.br')
     cy.get('#username', {timeout:5000}).type(username).log('Usuário inputado com Sucesso cypress.env.json!');
     cy.get('[type="submit"]', {timeout:5000}).click().log('Botão de Submit do Username clicado com Sucesso!');
     cy.get('#password', {timeout:5000}).type('123456').log('Senha fantasia inputado com Sucesso!');

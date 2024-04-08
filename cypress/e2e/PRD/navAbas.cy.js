@@ -27,7 +27,7 @@ describe('Cenário de Navegação e coleta abas do Sintegre', () => {
         cy.consultaPR()
     });
 
-   it('Acessando aba de Serviços e confirmando Portal API', () => {
+   it.only('Acessando aba de Serviços e confirmando Portal API', () => {
         cy.portalAPI()
     });
     

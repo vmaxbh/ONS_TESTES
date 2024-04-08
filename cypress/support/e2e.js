@@ -1,4 +1,4 @@
 import './commands'
-import './login'
-import './abaConhecimento'
-import './abaServicos'
+import './PRD/abaConhecimento'
+import './PRD/abaServicos'
+import './PRD/login'
