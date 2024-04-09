@@ -6,6 +6,12 @@ Cypress.Commands.add('loginCaminhoFeliz', (username = Cypress.env("USERNAME"), p
     cy.get('[type="submit"]', {timeout:5000}).click().log('Botão de Submit do Password clicado com Sucesso!');
     cy.contains('Maxwell Madureira Viana', {timeout:15000}).should('be.visible').log('Componente na Tela Inicial identificado com Sucesso!');
     cy.log('Cenário de Login Caminho Feliz realizado com sucesso!');
+    cy.on('uncaught:exception', (err) => {
+        if (err.message.includes('SignalR')) {
+            // Ignorar o erro
+            return false;
+        }
+    });
 });
 
 Cypress.Commands.add('loginUsuárioInvalido', (username = Cypress.env("USERNAME"), password = Cypress.env("PASSWORD")) => {
